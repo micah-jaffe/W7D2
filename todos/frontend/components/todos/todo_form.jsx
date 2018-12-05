@@ -6,7 +6,7 @@ export default class TodoForm extends React.Component {
     super(props);
 
     this.state = {
-      id: IDUtil(),
+      // id: IDUtil(),
       body: '',
       title: '',
       done: false
@@ -42,6 +42,7 @@ export default class TodoForm extends React.Component {
         </label>
 
         <input type="submit" value="Submit"></input>
+        {this.props.errors.map( error => <p key={error}>{error}</p>)}
       </form>
     );
   }
